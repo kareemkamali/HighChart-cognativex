@@ -1,5 +1,8 @@
-import axios from 'axios';
 import React, { useEffect, useState } from 'react'
+
+
+
+import axios from 'axios';
 import HightChart from '../components/HightChart/HightChart';
 import Navbar from '../components/Navbar/Navbar'
 

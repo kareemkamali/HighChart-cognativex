@@ -6,6 +6,8 @@ import moment from 'moment'; // format date
 import { motion } from 'framer-motion';
 
 import './Chart.scss'
+
+
 const HightChart = (data) => {
     //option const pass to option propertie to HighChartReact
     const options = {

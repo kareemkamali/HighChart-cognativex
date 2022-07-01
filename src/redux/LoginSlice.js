@@ -1,5 +1,4 @@
 import { createSlice } from "@reduxjs/toolkit"
-import { useHistory } from "react-router-dom";
 
 //slice from redux toolkit to dispatch and check all action
 export const LoginSlice=createSlice({
