@@ -1,25 +1,27 @@
-import logo from './logo.svg';
-import './App.css';
-
-function App() {
+import React from 'react'
+import { Redirect, Route, Switch } from 'react-router-dom';
+import './App.scss';// all shared styles in this file
+import DashboardPage from './pages/DashboardPage';
+import LoginPage from './pages/LoginPage';
+import { useSelector } from 'react-redux';
+const App = () => {
+  const { isValid } = useSelector(state => state.isValid);// to get the state from STORE
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    //div app contain all pages same background
+    <div className='app'>
+      {/* switch to organize the routes */}
+      <Switch>
+        <Route exact path='/'>
+          <LoginPage />
+        </Route>
+        {/* to protect dashboard Route */}
+        {isValid && <Route path='/dashboard'>
+          <DashboardPage />
+        </Route>}
+        <Redirect to='/' />
+      </Switch>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

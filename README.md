@@ -1,8 +1,12 @@
-# Getting Started with Create React App
+## HINT
+I used unnecessary libraries on this app like (REDUX) in order to demonstrate my knowledge of them if 
+i have a big app
+## First setp
+pull app from github
+## Second step Install All dependencies
+### `npm install`
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Available Scripts
+## Third step Follow Available Scripts
 
 In the project directory, you can run:
 
