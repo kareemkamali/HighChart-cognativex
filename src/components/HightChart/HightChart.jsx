@@ -16,8 +16,17 @@ const HightChart = (data) => {
             align: 'right',
             backgroundColor: '#282c34',//dark background of whole chart
             type: 'line',
-            width: 800 //width of chart graph
+            width: 500 ,//width of chart graph
+       
         },
+        responsive: {
+            rules: [{
+                condition: {
+                    maxWidth: 500
+                },}]},
+
+
+
         title: {
             text: 'PageViews over Time',//title of chart
             align: 'left',//postion on left
